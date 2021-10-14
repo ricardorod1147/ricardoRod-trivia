@@ -1,124 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    height: 600px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgba(150, 186, 255, 1);
+.container {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(150, 186, 255, 1);
 }
 
 #form-trivia {
-    width: 60%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
-    background-color: rgba(107, 122, 161, 1);
+  width: 60%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  background-color: rgba(107, 122, 161, 1);
 }
 
 h3 {
-    color: white;
-    margin-bottom: 20px;
-    font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 .campoText {
-    margin:10px 0px;
-    width: 60%;
-    height: 30px;
-    font-size: 18px;
-    color: #6a6a6a;
-    border-radius: 10px;
+  margin: 10px 0px;
+  width: 60%;
+  height: 30px;
+  font-size: 18px;
+  color: #6a6a6a;
+  border-radius: 10px;
 }
 
-#submitSearch{
-    width: 8rem;
-    height: 40px;
-    margin-top: 20px;
-    font-size: 24px;
-    color: #6a6a6a;
+#submitSearch {
+  width: 8rem;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #6a6a6a;
 }
 
-#submitSearch{
-    border-radius: 10px;
-    
+#submitSearch {
+  border-radius: 10px;
 }
 
 #repuestas {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .botonRespuesta {
-    width: 20%;
-    height: 50px;
-    overflow:hidden;
-    background-color: rgba(12, 236, 221, 0.7);
-    border-radius: 10px;
-    color: white;
-    font-size: 18px;
-    letter-spacing: 0.4px;
+  width: 20%;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgba(12, 236, 221, 0.7);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.4px;
 }
 
-.botonRespuesta:hover{
-    font-size: 22px;
-    background-color: rgba(12, 236, 221, 0.9);
-    color: #1A1C20;
+.botonRespuesta:hover {
+  font-size: 22px;
+  background-color: rgba(12, 236, 221, 0.9);
+  color: #1a1c20;
 }
 
-
-
-.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: blueviolet;
-    width: 100%;
-    height: 100vh;
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: blueviolet;
+  width: 100%;
+  height: 100vh;
 }
-.zoneQuestion{
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
-    color: whitesmoke;
-    font-size: 38px;
-    text-align: center;
+.zoneQuestion {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  color: whitesmoke;
+  font-size: 38px;
+  text-align: center;
 }
-.zoneQuestion p:hover{
-    font-size: 42px; 
-    color: #d8d8d8;
+.zoneQuestion p:hover {
+  font-size: 42px;
+  color: #d8d8d8;
 }
-.zoneQuestion h2{
-    margin: 45px;
-    margin-bottom: 100px;
-}
-
-.zoneQuestion h2:hover{
-    letter-spacing: 5px;
+.zoneQuestion h2 {
+  margin: 30px;
+  margin-bottom: 50px;
 }
 
-
-
-.botonNext{
-    background-color:chartreuse;
-    width: 80px;
-    color:#1A1C20;
-    border-radius: 10px;
-    letter-spacing: 0.4px;
+.zoneQuestion h2:hover {
+  letter-spacing: 5px;
 }
 
-.zoneAnswer{
-    display: flex;
-    justify-content:space-around;
-    width: 100%;
+.botonNext {
+  background-color: chartreuse;
+  width: 80px;
+  color: #1a1c20;
+  border-radius: 10px;
+  letter-spacing: 0.4px;
+}
+
+.zoneAnswer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.botonTry {
+  width: 40%;
+  height: 600px;
+  background-color: rgba(12, 236, 221, 0.7);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+.botonTry:hover {
+  font-size: 22px;
+  background-color: rgba(12, 236, 221, 0.9);
+  color: #1a1c20;
 }

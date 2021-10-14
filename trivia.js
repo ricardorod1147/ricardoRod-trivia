@@ -9,7 +9,6 @@ const container = document.getElementsByClassName("container");
 const containerPreguntas = document.getElementById("renderPreguntas");
 const holaa = document.getElementById("botoN");
 
-
 let arrNum = [];
 let arrdi = [];
 let arrCat = [];
@@ -88,15 +87,13 @@ const renderQuestions = async api =>{
     const resulDinamic = await fetchDos.json();
     renderFormat(resulDinamic);
 }
-
 const renderFormat=(objetoRender)=>{
     let count = 0;
     let arrayQuestions = objetoRender.results;
     let incorrectQuestion = arrayQuestions[count].incorrect_answers;
     let puntajeUno = 0;
     let arrRespuestas = [];
-    console.log(arrayQuestions);
-    
+    console.log(arrayQuestions);  
     containerPreguntas.innerHTML = ``;
 
     if(incorrectQuestion.length>=2){ 
@@ -117,10 +114,8 @@ const renderFormat=(objetoRender)=>{
         <input type="button" id="resDos" value="${arrRes[1]}" class="botonRespuesta">
         <input type="button" id="resTres" value="${arrRes[0]}" class="botonRespuesta">
         <input type="button" id="resCuatro" value="${arrRes[3]}" class="botonRespuesta">
-        <input type="button" value="Siguiente" class="botonNext" id="holaaa">
         </div>
         </div>`;
-
 
                 const resUno = document.getElementById("resUno");
                 const resDos = document.getElementById("resDos");
@@ -153,32 +148,30 @@ const renderFormat=(objetoRender)=>{
                     handleUno(resCuatro.value);
                 }
 
-
-
 // FUNCION PARA DAR SIGUIENTE PREGUNTA
-        const btnext = document.getElementById("holaaa");
+
         const saludo = () => {
             
         if(count<(arrayQuestions.length-1)){
             count++;
             render();
         }else{
+            let promedio = ((puntajeUno*100)/arrayQuestions.length).toFixed();
+            let promedioTotal = promedio > 70 ? "¡Ganaste! :)" : "mmmm Perdiste :(";
+
             containerPreguntas.innerHTML =
             `<div class="active">
             <div class="zoneQuestion">
-            <h2>Su puntaje es  ${puntajeUno}</h2>
-            <p>Fin del juego</p>
+            <h2>${promedioTotal}</h2>
+            <h2>Su puntaje es  ${puntajeUno} de ${arrayQuestions.length} Efectividad de ${promedio} %</h2>
+            <button class="botonTry" onclick="window.location.reload();">Try Again</button>
             </div>
             <div class="zoneAnswer">
             </div>`
         }
-
         }
-        btnext.onclick = saludo;
-// FIN FUNCION PARA DAR SIGUIENTE PREGUNTA
     }
     render();
-              
 
     }else{
         let puntajeCorrect = 0;
@@ -222,15 +215,6 @@ const renderFormat=(objetoRender)=>{
 
 // FIN  RESPUESTA CORRECTA
 
-                                   
-
-// FIN RESPUESTA INCORRECTA
-
-
-
-// RESPUESTA INCORRECTA
-
-
         const siguienteDos = () => {
             
         if(count<(arrayQuestions.length-1)){
@@ -240,22 +224,19 @@ const renderFormat=(objetoRender)=>{
             containerPreguntas.innerHTML =
             `<div class="active">
             <div class="zoneQuestion">
-            <h2>Su puntaje es  ${puntajeCorrect}</h2>
-            <p>Fin del juego</p>
+            <h2>Perdiste o ganaste</h2>
+            <h2>Su puntaje es  ${puntajeCorrect} de ${arrayQuestions.length}</h2>
+            <button class="botonTry" onclick="window.location.reload();">Try Again</button>
+            
             </div>
             <div class="zoneAnswer">
             </div>`
         }
-
-        
         }
-
     }
     renderDos();
 }
 }
-
-
 
 // FUNCION DIFICULTAD
 const retornoDificultad = () => {
