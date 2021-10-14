@@ -221,13 +221,16 @@ const renderFormat=(objetoRender)=>{
             count++;
             renderDos();
         }else{
+
+            let promedio = ((puntajeUno*100)/arrayQuestions.length).toFixed();
+            let promedioTotal = promedio > 70 ? "¡Ganaste! :)" : "mmmm Perdiste :("; 
+
             containerPreguntas.innerHTML =
             `<div class="active">
             <div class="zoneQuestion">
-            <h2>Perdiste o ganaste</h2>
-            <h2>Su puntaje es  ${puntajeCorrect} de ${arrayQuestions.length}</h2>
-            <button class="botonTry" onclick="window.location.reload();">Try Again</button>
-            
+            <h2>${promedioTotal}</h2>
+            <h2>Su puntaje es  ${puntajeUno} de ${arrayQuestions.length} Efectividad de ${promedio} %</h2>
+            <button class="botonTry" onclick="window.location.reload();">Try Again</button>         
             </div>
             <div class="zoneAnswer">
             </div>`
