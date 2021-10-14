@@ -4,8 +4,8 @@
 }
 
 .container{
-    height: 100vh;
-    width: 100vw;
+    height: 600px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,12 @@
 
 #form-trivia {
     width: 60%;
-    height: 90vh;
+    height: 600px;
     display: flex;
     justify-content: center;
-    align-items:inherit;
+    align-items: center;
     flex-direction: column;
+    margin-top: 100px;
     background-color: rgba(107, 122, 161, 1);
 }
 
@@ -47,4 +48,77 @@ h3 {
 #submitSearch{
     border-radius: 10px;
     
+}
+
+#repuestas {
+    width: 100%;
+    height: 100vh;
+}
+
+.botonRespuesta {
+    width: 20%;
+    height: 50px;
+    overflow:hidden;
+    background-color: rgba(12, 236, 221, 0.7);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+}
+
+.botonRespuesta:hover{
+    font-size: 22px;
+    background-color: rgba(12, 236, 221, 0.9);
+    color: #1A1C20;
+}
+
+
+
+.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;
+    width: 100%;
+    height: 100vh;
+}
+.zoneQuestion{
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    color: whitesmoke;
+    font-size: 38px;
+    text-align: center;
+}
+.zoneQuestion p:hover{
+    font-size: 42px; 
+    color: #d8d8d8;
+}
+.zoneQuestion h2{
+    margin: 45px;
+    margin-bottom: 100px;
+}
+
+.zoneQuestion h2:hover{
+    letter-spacing: 5px;
+}
+
+
+
+.botonNext{
+    background-color:chartreuse;
+    width: 80px;
+    color:#1A1C20;
+    border-radius: 10px;
+    letter-spacing: 0.4px;
+}
+
+.zoneAnswer{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
 }
